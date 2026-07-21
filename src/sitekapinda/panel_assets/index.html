@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>SiteKapında Sales Operations</title>
+  <link rel="icon" href="sitekapinda-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-row">
+        <a class="brand" href="./" aria-label="SiteKapında Sales Ops home">
+          <img src="sitekapinda-logo.svg" alt="SiteKapında">
+        </a>
+        <span class="product-pill">Sales Ops</span>
+      </div>
+
+      <p class="local-label"><span aria-hidden="true"></span>Build Week judge demo · local-only data</p>
+
+      <section class="summary" aria-label="Pipeline overview">
+        <div><strong id="metric-total">0</strong><span>Leads</span></div>
+        <div><strong id="metric-open">0</strong><span>New</span></div>
+        <div><strong id="metric-contacted">0</strong><span>Contacted</span></div>
+        <div><strong id="metric-interested">0</strong><span>Interested</span></div>
+      </section>
+
+      <label class="field">
+        <span>Search</span>
+        <input id="search" type="search" placeholder="Business, city, or category..." autocomplete="off">
+      </label>
+
+      <div class="filters">
+        <label class="field">
+          <span>Status</span>
+          <select id="status-filter">
+            <option value="all">All leads</option>
+            <option value="new">New</option>
+            <option value="contacted">Contacted</option>
+            <option value="interested">Interested</option>
+            <option value="approved">Approved</option>
+            <option value="not_interested">Not interested</option>
+            <option value="do_not_contact">Do not contact</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Category</span>
+          <select id="category-filter"><option value="all">All categories</option></select>
+        </label>
+      </div>
+
+      <div class="lead-list" id="lead-list" aria-label="Lead list"></div>
+    </aside>
+
+    <main class="detail">
+      <header class="detail-header">
+        <div>
+          <p class="eyebrow">Sales workspace</p>
+          <h1 id="detail-name">Select a lead</h1>
+          <p id="detail-meta">Review the static desktop and mobile mockups, synthetic evidence, and outreach status.</p>
+        </div>
+        <div class="header-actions">
+          <button id="refresh" class="secondary" type="button">Reset view</button>
+        </div>
+      </header>
+
+      <section id="empty-state" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">&#9671;</div>
+        <h2>No generated leads yet.</h2>
+        <p>Run the deterministic pipeline to populate this local workspace.</p>
+      </section>
+
+      <section id="detail-content" class="detail-content" hidden>
+        <section class="preview-section" aria-labelledby="preview-heading">
+          <div class="section-title">
+            <div>
+              <span id="preview-heading">Static responsive mockups</span>
+              <p id="preview-description">Dedicated desktop and mobile PNGs show the proposed responsive direction.</p>
+            </div>
+            <span class="preview-state" id="preview-state">Checking local mockups</span>
+          </div>
+          <div id="preview-grid" class="preview-grid"></div>
+        </section>
+
+        <div class="detail-grid">
+          <section class="panel work-panel">
+            <div class="panel-heading">
+              <span>Outreach status</span>
+              <strong id="status-pill">New</strong>
+            </div>
+
+            <label class="check-row">
+              <input id="contacted-check" type="checkbox">
+              <span>Contacted</span>
+            </label>
+
+            <label class="field">
+              <span>Latest status</span>
+              <select id="status-select">
+                <option value="new">New</option>
+                <option value="contacted">Contacted</option>
+                <option value="interested">Interested</option>
+                <option value="approved">Approved</option>
+                <option value="not_interested">Not interested</option>
+                <option value="do_not_contact">Do not contact</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Note</span>
+              <textarea id="note" rows="5" placeholder="Preview reviewed, follow-up scheduled, decision pending..."></textarea>
+            </label>
+
+            <div class="button-row">
+              <button id="save-status" type="button">Save locally</button>
+              <button id="copy-message" class="secondary" type="button">Copy outreach</button>
+            </div>
+            <p id="save-feedback" class="feedback" aria-live="polite"></p>
+          </section>
+
+          <section class="panel contact-panel">
+            <div class="panel-heading">
+              <span>Synthetic evidence</span>
+              <strong id="evidence-score">—</strong>
+            </div>
+            <div class="evidence-list">
+              <div class="evidence-card">
+                <span>Phone · display only</span>
+                <strong id="phone-display">Not recorded</strong>
+                <small>No calling or messaging action is enabled.</small>
+              </div>
+              <div class="evidence-card">
+                <span>Website evidence</span>
+                <strong id="website-evidence">Not recorded</strong>
+                <small>No external source link is stored in this judge view.</small>
+              </div>
+              <div class="evidence-card">
+                <span>Next action</span>
+                <strong id="next-action">Human review</strong>
+                <small>Changes in this panel stay in this browser.</small>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel reason-panel">
+          <div class="panel-heading">
+            <span>Lead rationale</span>
+            <strong id="created-at"></strong>
+          </div>
+          <p id="selection-reason"></p>
+        </section>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="panel-data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

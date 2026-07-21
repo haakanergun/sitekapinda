@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiteKapında Discover"
+  short_description: "Run compliant business discovery"
+  default_prompt: "Use $sitekapinda-discover to run one compliant synthetic discovery cycle."

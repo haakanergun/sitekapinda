@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiteKapında Sales"
+  short_description: "Operate the local lead review workflow"
+  default_prompt: "Use $sitekapinda-sales to review leads and update a synthetic sales status."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiteKapında Preview"
+  short_description: "Review a private website preview"
+  default_prompt: "Use $sitekapinda-preview to review a local noindex preview for a selected lead."

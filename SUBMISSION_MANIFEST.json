@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "submission": {
+    "name": "SiteKapinda",
+    "display_name": "SiteKapında",
+    "release": "0.1.3",
+    "event": "OpenAI Build Week",
+    "tagline": "A first working website arrives before the sales pitch.",
+    "primary_language": "Python",
+    "license": "MIT"
+  },
+  "judge_quick_start": {
+    "windows": "powershell -ExecutionPolicy Bypass -File .\\scripts\\bootstrap.ps1",
+    "macos_linux": "bash ./scripts/bootstrap.sh",
+    "network_required": false,
+    "api_key_required": false,
+    "expected_dashboard": "runtime/generated/index.html",
+    "dashboard_description": "English Sales Ops master-detail workspace with twenty-four distinct GPT Image desktop/mobile website mockups and synthetic local pipeline data only"
+  },
+  "components": [
+    {
+      "path": "src/sitekapinda",
+      "role": "Deterministic discovery, compliance, scoring, preview, persistence, English Sales Ops workspace, sales-state, and reporting core"
+    },
+    {
+      "path": "plugins/sitekapinda",
+      "role": "Five validated human-supervised Codex workflow skills"
+    },
+    {
+      "path": "codex",
+      "role": "Versioned prompts, model-routing disclosure, and an uninstalled automation example"
+    },
+    {
+      "path": "apps/sites-demo",
+      "role": "Source for the fictional Sedirra Codex Sites companion"
+    },
+    {
+      "path": "data/mock_places.json",
+      "role": "Twelve fictional, non-routable judge fixtures"
+    },
+    {
+      "path": "src/sitekapinda/demo_assets",
+      "role": "Rights-safe sector photography used as visual context and by the supplementary deterministic HTML packages"
+    },
+    {
+      "path": "src/sitekapinda/panel_assets/mockups",
+      "role": "Twenty-four complete GPT Image website UI mockups: independent desktop and mobile compositions for all twelve fictional businesses"
+    }
+  ],
+  "verification": {
+    "python_tests": {
+      "passed": 19,
+      "failed": 0,
+      "network_used": false
+    },
+    "sites_demo": {
+      "production_build": "passed",
+      "tests_passed": 2,
+      "tests_failed": 0,
+      "lint": "passed"
+    },
+    "codex_plugin": {
+      "skills_validated": 5,
+      "plugin_validation": "passed",
+      "forward_judge_test": "passed"
+    }
+  },
+  "evidence": {
+    "video": "https://youtu.be/ktev7Dng_jk",
+    "codex_sites_demo": "https://sedirra-sites-demo.haakanergun.chatgpt.site",
+    "product_site": "https://sitekapinda.com",
+    "customer_example": "https://cagrikarakas.com"
+  },
+  "safety_boundary": {
+    "default_mode": "mock",
+    "fixture_is_synthetic": true,
+    "outreach_enabled": false,
+    "automatic_publication_enabled": false,
+    "domain_or_dns_changes_enabled": false,
+    "openai_api_call_in_python_runtime": false,
+    "generated_previews_are_noindex": true,
+    "packaged_gpt_image_site_mockups": 24,
+    "packaged_mockups_are_fictional": true,
+    "publication_requires_explicit_human_approval": true
+  }
+}
