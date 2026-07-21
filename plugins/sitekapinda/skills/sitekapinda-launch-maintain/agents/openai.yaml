@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiteKapında Launch & Maintain"
+  short_description: "Plan approved launch and maintenance"
+  default_prompt: "Use $sitekapinda-launch-maintain to plan an approved deployment without publishing."

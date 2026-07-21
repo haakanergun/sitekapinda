@@ -1,0 +1,35 @@
+{
+  "name": "sitekapinda",
+  "version": "0.1.0",
+  "description": "Human-approved Codex workflows for the SiteKapinda discovery-to-preview demonstration.",
+  "author": {
+    "name": "SiteKapında",
+    "url": "https://sitekapinda.com"
+  },
+  "homepage": "https://sitekapinda.com",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "small-business",
+    "website-preview",
+    "sales-workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "SiteKapında",
+    "shortDescription": "Run the safe discovery-to-site demo",
+    "longDescription": "Operate SiteKapında's synthetic discovery, private preview, sales-state, and approved launch workflows with explicit human checkpoints.",
+    "developerName": "SiteKapında",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://sitekapinda.com",
+    "defaultPrompt": [
+      "Set up and run the synthetic SiteKapında demo.",
+      "Review the generated leads and private previews.",
+      "Plan an approved site launch without publishing."
+    ]
+  }
+}

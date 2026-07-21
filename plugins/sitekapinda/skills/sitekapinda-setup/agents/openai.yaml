@@ -1,0 +1,4 @@
+interface:
+  display_name: "SiteKapında Setup"
+  short_description: "Set up the safe local demonstration"
+  default_prompt: "Use $sitekapinda-setup to install and run the synthetic local demo."
